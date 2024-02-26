@@ -11,7 +11,15 @@ public class BookDTO {
         this.title = title;
         this.editorial = editorial;
     }
+    AuthorDTO authorDTO;
 
+    public AuthorDTO getAuthorDTO() {
+        return authorDTO;
+    }
+
+    public void setAuthorDTO(AuthorDTO authorDTO) {
+        this.authorDTO = authorDTO;
+    }
     public String getTitle() {
         return title;
     }

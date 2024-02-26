@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Authors</title>
+    <br>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    tr:first-child {
+        background-color: lightyellow;
+        color: black;
+        }
+
+    td {
+    text-aling: center;
+    font-weight: bold;
+    }
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Authors List</h1>
+    <table width="60%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        <tr>
+        <tr th:each="author: ${authors}">
+            <th th:text="${author.name}"></th>
+            <th th:text="${author.lastName}"></th>
+
+    </tr>
+    </table>
+</body>
+</html>

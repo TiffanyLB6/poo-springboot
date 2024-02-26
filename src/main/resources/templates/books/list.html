@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Books</title>
+    <br>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    tr:first-child {
+        background-color: lightyellow;
+        color: black;
+        }
+
+    td {
+        text-aling: center;
+        font-weight: bold;
+    }
+
+    </style>
+</head>
+<body>
+<h1>Books List</h1>
+<table width="60%">
+    <tr>
+        <th>Title</th>
+        <th>Editorial</th>
+    <tr>
+    <tr th:each="book: ${books}">
+        <th th:text="${book.title}"></th>
+        <th th:text="${book.editorial}"></th>
+</body>
+</html>

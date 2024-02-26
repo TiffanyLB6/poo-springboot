@@ -20,7 +20,12 @@ public class BookService {
         List<BookDTO> bookDTOList = new ArrayList<>();
         Iterable<Book> bookIterable = bookRepository.findAll();
         for(Book book: bookIterable) {
-            BookDTO bookDTO = new BookDTO(book.getTitle(), book.getEditorial());
+            BookDTO bookDTO = new BookDTO();
+            bookDTO.setTitle(book.getTitle());
+            bookDTO.setEditorial(book.getEditorial());
+            AuthorDTO authorDTO =  new AuthorDTO();
+            authorDTO.setName(book.getAuthor().getLastname());
+            bookDTO.setAuthorDTO(authorDTO);
             bookDTOList.add(bookDTO);
         }
         return bookDTOList;
