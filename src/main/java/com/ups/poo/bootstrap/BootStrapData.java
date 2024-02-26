@@ -59,12 +59,6 @@ public class BootStrapData implements CommandLineRunner {
         //Save Objects in Entities
 
 
-
-
-
-
-
-
         System.out.println("-------------Started BootStrapData-----------");
         System.out.println("Number of Books: " + bookRepository.count());
         System.out.println("Number of Authors:" + authorRepository.count());
